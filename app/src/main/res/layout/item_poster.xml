@@ -5,59 +5,100 @@
 
     <data>
 
-<!--        <variable-->
-<!--            name="details"-->
-<!--            type="c" />-->
+
+        <variable
+            name="poster"
+            type="com.benmohammad.marvelous.model.Poster" />
+
+        <variable
+            name="veil"
+            type="com.skydoves.androidveil.VeilLayout" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/item_container"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/background800"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/background800"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp">
 
-        <com.skydoves.transformationlayout.TransformationLayout
-            android:id="@+id/transformationLayout"
-            android:layout_width="wrap_content"
+        <com.skydoves.androidveil.VeilLayout
+            android:id="@+id/item_veilLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:veilLayout_baseAlpha="0.9"
+            app:veilLayout_baseColor="@color/background"
+            app:veilLayout_dropOff="0.5"
+            app:veilLayout_highlightAlpha="1.0"
+            app:veilLayout_radius="12dp"
+            app:veilLayout_shimmerEnable="true"
+            app:veilLayout_veiled="true">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/item_container"
-                android:layout_width="100dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:background="@color/background800"
                 android:foreground="?attr/selectableItemBackground"
-                app:cardBackgroundColor="@color/background800"
-                app:cardCornerRadius="12dp"
-                app:cardElevation="12dp">
+                android:orientation="vertical"
+                tools:ignore="UnusedAttribute">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/item_poster_post"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="center"
+                    app:layout_constraintDimensionRatio="H,9.5:16"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:loadImageWithVeil="@{poster.poster}"
+                    app:withVeil="@{veil}" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/item_poster_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:orientation="vertical"
-                    tools:ignore="UnusedAttribute">
+                    android:layout_marginStart="22dp"
+                    android:maxLines="1"
+                    android:padding="8dp"
+                    android:text="@{poster.name}"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    android:textColor="@color/white"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:autoSizeMaxTextSize="26sp"
+                    app:autoSizeMinTextSize="16sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/transformationLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="Iron Man" />
+
+                <com.skydoves.transformationlayout.TransformationLayout
+                    android:id="@+id/transformationLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:transformation_duration="550"
+                    app:transformation_pathMode="arc">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/item_poster_post"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:scaleType="center"
-                        app:layout_constraintDimensionRatio="H,9:14"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                         />
+                        android:id="@+id/play"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        app:srcCompat="@drawable/ic_play_circle_outline" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.skydoves.transformationlayout.TransformationLayout>
 
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </com.skydoves.transformationlayout.TransformationLayout>
+        </com.skydoves.androidveil.VeilLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </layout>

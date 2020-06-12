@@ -19,7 +19,7 @@ fun View.circularRevealedAtCenter(@ColorInt color: Int) {
         ViewAnimationUtils.createCircularReveal(this, cx, cy, 0f, finalRadius.toFloat()).apply {
             DrawableCompat.setTint(background, color)
             visible()
-            duration = 500
+            duration = 550
             start()
         }
     }

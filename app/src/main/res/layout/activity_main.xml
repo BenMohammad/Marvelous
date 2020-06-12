@@ -5,13 +5,14 @@
 
     <data>
 
-<!--        <variable-->
-<!--            name="vm"-->
-<!--            type="com.benmohammad.marvelous.MainViewModel" />-->
 
-<!--        <variable-->
-<!--            name="adapter"-->
-<!--            type="com.benmohammad.marvelous.view.adapter.PosterAdapter" />-->
+        <variable
+            name="vm"
+            type="com.benmohammad.marvelous.view.ui.main.MainViewModel" />
+
+        <variable
+            name="adapter"
+            type="com.benmohammad.marvelous.view.adapter.PosterAdapter" />
 
     </data>
 
@@ -62,16 +63,17 @@
 <!--            android:id="@+id/recyclerView"-->
 <!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="0dp"-->
-<!--            app:adapter="@{adapter}"-->
-<!--            app:adapterPosterList="@{vm.posterListLiveData}"-->
-<!--            app:bindOnItemChanged="@{adapter}"-->
-<!--            app:bindOnItemChangedBackground="@{pointView}"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintLeft_toLeftOf="parent"-->
-<!--            app:layout_constraintRight_toRightOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/greeting"-->
-<!--            app:toast="@{vm.toastLiveData}"-->
-<!--            tools:listitem="@layout/item_poster" />-->
+<!--&lt;!&ndash;            app:adapter="@{adapter}"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:adapterPosterList="@{vm.posterListLiveData}"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:bindOnItemChanged="@{adapter}"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:bindOnItemChangedBackground="@{pointView}"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintLeft_toLeftOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintRight_toRightOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/greeting"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:toast="@{vm.toastLiveData}"&ndash;&gt;-->
+<!--            -->
+<!--        tools:listitem="@layout/item_poster" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
