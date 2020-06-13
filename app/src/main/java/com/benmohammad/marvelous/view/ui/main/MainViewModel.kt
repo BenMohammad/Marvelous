@@ -8,7 +8,7 @@ import com.benmohammad.marvelous.model.Poster
 import com.benmohammad.marvelous.repository.MainRepository
 
 class MainViewModel constructor(
-    private val mainRepository: MainRepository
+    val mainRepository: MainRepository
 ): LiveCoroutinesViewModel() {
 
     private var posterFetchingLiveData: MutableLiveData<Boolean> = MutableLiveData()

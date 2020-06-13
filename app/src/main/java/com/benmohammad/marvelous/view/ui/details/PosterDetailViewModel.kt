@@ -4,7 +4,7 @@ import com.benmohammad.marvelous.base.LiveCoroutinesViewModel
 import com.benmohammad.marvelous.repository.DetailRepository
 
 class PosterDetailViewModel(
-    private val repository: DetailRepository
+    val repository: DetailRepository
 ): LiveCoroutinesViewModel() {
 
     fun getPoster(id: Long) = repository.getPosterById(id)

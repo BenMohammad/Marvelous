@@ -38,18 +38,18 @@ class PosterSeriesAdapter(
             details = item
             executePendingBindings()
             root.setOnClickListener {
-                if(selectable) {
-                    selectable = false
-                    layoutPlotBinding.details = item
-                    layoutPlotBinding.root.setOnClickListener {
-                        holder.binding.transformationLayout.finishTransform()
-                        selectable = true
-                    }
-                    layoutPlotBinding.executePendingBindings()
-                    holder.binding.transformationLayout.bindTargetView(layoutPlotBinding.root)
-                    holder.binding.transformationLayout.startTransform()
-
-                }
+//                if(selectable) {
+//                    selectable = false
+//                    layoutPlotBinding.details = item
+//                    layoutPlotBinding.root.setOnClickListener {
+//                        holder.binding.transformationLayout.finishTransform()
+//                        selectable = true
+//                    }
+//                    layoutPlotBinding.executePendingBindings()
+//                    holder.binding.transformationLayout.bindTargetView(layoutPlotBinding.root)
+//                    holder.binding.transformationLayout.startTransform()
+//
+//                }
             }
         }
     }

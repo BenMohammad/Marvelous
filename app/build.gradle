@@ -11,14 +11,22 @@ android {
     }
 
 
+
+
     defaultConfig {
         applicationId "com.benmohammad.marvelous"
-        minSdkVersion 23
+        minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
+
     }
 
     buildTypes {
@@ -35,29 +43,16 @@ android {
         jvmTarget = "1.8"
     }
 
-    configurations.all {
-        resolutionStrategy.force "org.antlr:antlr4-runtime:4.5.3"
-        resolutionStrategy.force "org.antlr:antlr4-tool:4.5.3"
-    }
-
-//kotlin DSL
-    configurations.all {
-        resolutionStrategy {
-            force("org.antlr:antlr4-runtime:4.5.3")
-            force("org.antlr:antlr4-tool:4.5.3")
-        }
-    }
-
-
 }
-
 dependencies {
+
+
 
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
 
     // android supports
-    implementation "com.google.android.material:material:$versions.materialVersion"
+    implementation 'com.google.android.material:material:1.1.0'
     implementation "androidx.constraintlayout:constraintlayout:$versions.constraintVersion"
 
     // architecture components
@@ -111,3 +106,4 @@ dependencies {
     testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$versions.mockitoKotlinVersion"
     testImplementation "org.mockito:mockito-inline:$versions.mockitoInlineVersion"
 }
+

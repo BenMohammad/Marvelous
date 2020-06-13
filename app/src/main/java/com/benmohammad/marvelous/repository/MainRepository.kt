@@ -6,7 +6,6 @@ import com.benmohammad.marvelous.network.MarvelClient
 import com.benmohammad.marvelous.persistence.PosterDao
 import com.skydoves.sandwich.*
 import com.skydoves.whatif.whatIfNotNull
-import com.skydoves.whatif.whatIfNotNullOrEmpty
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import timber.log.Timber

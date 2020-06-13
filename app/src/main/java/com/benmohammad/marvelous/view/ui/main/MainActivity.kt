@@ -1,10 +1,10 @@
-package com.benmohammad.marvelous
+package com.benmohammad.marvelous.view.ui.main
 
 import android.os.Bundle
+import com.benmohammad.marvelous.R
 import com.benmohammad.marvelous.base.DatabindingActivity
 import com.benmohammad.marvelous.databinding.ActivityMainBinding
 import com.benmohammad.marvelous.view.adapter.PosterAdapter
-import com.benmohammad.marvelous.view.ui.main.MainViewModel
 import com.skydoves.transformationlayout.onTransformationStartContainer
 import org.koin.android.viewmodel.ext.android.getViewModel
 

@@ -2,7 +2,7 @@ package com.benmohammad.marvelous.repository
 
 import com.benmohammad.marvelous.persistence.PosterDao
 
-class DetailRepository constructor(
+class   DetailRepository constructor(
     private val posterDao: PosterDao
 ): Repository {
 
