@@ -5,13 +5,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.benmohammad.marvelous.R
-import com.benmohammad.marvelous.databinding.ItemPosterBinding
 import com.benmohammad.marvelous.databinding.ItemPosterSeriesBinding
 import com.benmohammad.marvelous.databinding.LayoutPlotBinding
 import com.benmohammad.marvelous.model.PosterDetails
 
 class PosterSeriesAdapter(
-    private val layoutPLotBinding: LayoutPlotBinding
+    private val layoutPlotBinding: LayoutPlotBinding
 ): RecyclerView.Adapter<PosterSeriesAdapter.PosterSeriesViewHolder>() {
 
     private val items = mutableListOf<PosterDetails>()
@@ -41,16 +40,17 @@ class PosterSeriesAdapter(
             root.setOnClickListener {
                 if(selectable) {
                     selectable = false
-                    layoutPLotBinding.details = item
-                    layoutPLotBinding.root.setOnClickListener {
+                    layoutPlotBinding.details = item
+                    layoutPlotBinding.root.setOnClickListener {
                         holder.binding.transformationLayout.finishTransform()
                         selectable = true
                     }
-                    layoutPLotBinding.executePendingBindings()
-                    holder.binding.transformationLayout.bindTargetView(layoutPLotBinding.root)
+                    layoutPlotBinding.executePendingBindings()
+                    holder.binding.transformationLayout.bindTargetView(layoutPlotBinding.root)
                     holder.binding.transformationLayout.startTransform()
 
-                }            }
+                }
+            }
         }
     }
 

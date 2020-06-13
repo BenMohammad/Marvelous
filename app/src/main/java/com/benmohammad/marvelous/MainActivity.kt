@@ -21,10 +21,5 @@ class MainActivity : DatabindingActivity(){
             vm = getViewModel<MainViewModel>().apply { fetchMarvelPosterList() }
             adapter = PosterAdapter()
         }
-
-
-
     }
-
-
 }

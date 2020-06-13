@@ -10,6 +10,7 @@ android {
         enabled = true
     }
 
+
     defaultConfig {
         applicationId "com.benmohammad.marvelous"
         minSdkVersion 23
@@ -52,7 +53,6 @@ android {
 
 dependencies {
 
-    kapt 'androidx.databinding:databinding-compiler:3.6.3'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
 
