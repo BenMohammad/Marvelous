@@ -4,7 +4,6 @@ import android.graphics.drawable.Drawable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
-import androidx.appcompat.widget.DrawableUtils
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
@@ -14,14 +13,14 @@ import com.bumptech.glide.request.target.Target
 import com.skydoves.androidveil.VeilLayout
 
 @BindingAdapter("loadImage")
-fun bindLoadImage(view: AppCompatImageView, url: String) {
+fun bindLoadImage(view: AppCompatImageView, url: String?) {
     Glide.with(view.context)
         .load(url)
         .into(view)
 }
 
 @BindingAdapter("withVeil", "loadImageWithVeil")
-fun bindLoadImageWithVeil(view: AppCompatImageView, veilLayout: VeilLayout, url: String) {
+fun bindLoadImageWithVeil(view: AppCompatImageView, veilLayout: VeilLayout, url: String?) {
     Glide.with(view.context)
         .load(url)
         .listener(object : RequestListener<Drawable> {
